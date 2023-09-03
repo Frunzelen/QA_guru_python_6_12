@@ -4,6 +4,7 @@ from selene import browser, be, have, command
 from demoqa.pages.registration_page import RegistrationPage
 
 @allure.title("Successful registration")
+@allure.tag('web')
 def test_for_registration_form_demoqa():
     # GIVEN
     with allure.step("Open registrations form"):
