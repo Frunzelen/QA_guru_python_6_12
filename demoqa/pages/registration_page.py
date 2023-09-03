@@ -1,6 +1,4 @@
 from selene import browser, be, have, command
-
-import tests
 from demoqa.resources import path
 
 

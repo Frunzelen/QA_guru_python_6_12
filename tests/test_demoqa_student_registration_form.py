@@ -1,18 +1,23 @@
 import allure
+from allure_commons.types import Severity
 from selene import browser, be, have, command
 
 from demoqa.pages.registration_page import RegistrationPage
 
-@allure.title("Successful registration")
+@allure.title("Успешная регистрация на сайте demoqa.com")
 @allure.tag('web')
+@allure.severity(Severity.CRITICAL)
+@allure.label('owner', 'selenamond')
+@allure.description('Данные студента соответсвуют отправленным данным при регистрации')
+@allure.story('Регистрация студента')
 def test_for_registration_form_demoqa():
     # GIVEN
-    with allure.step("Open registrations form"):
+    with allure.step("Открыли страницу регистрации"):
         registration_page = RegistrationPage()
         registration_page.open()
 
     # WHEN
-    with allure.step("Fill form"):
+    with allure.step("Заполнили все поля формы регистрации"):
         (registration_page
         .fill_first_name('Angelina')
         .fill_last_name('Jolie')
@@ -30,7 +35,7 @@ def test_for_registration_form_demoqa():
          )
 
     # THEN
-    with allure.step("Assert form results"):
+    with allure.step("Проверили заполненные поля"):
         registration_page.should_have_text('Thanks for submitting the form')
         registration_page.registered_user_data.should(
             have.exact_texts(
@@ -47,9 +52,9 @@ def test_for_registration_form_demoqa():
         )
 
     # WHEN
-    with allure.step("close form registration"):
+    with allure.step("Закрыли форму регистрации"):
         registration_page.close()
 
     # THEN
-    with allure.step("opened an empty form registration"):
+    with allure.step("Проверяем,что открылась пустая форма регистрации"):
         registration_page.cleared_registration_form()
