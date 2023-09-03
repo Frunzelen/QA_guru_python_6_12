@@ -16,6 +16,6 @@
 1. [Сборка в Jenkins](https://jenkins.autotests.cloud/job/QA_guru_python_6_12_student_Ter-Akopova/9/)
 2. [Allure отчёт](https://jenkins.autotests.cloud/job/QA_guru_python_6_12_student_Ter-Akopova/9/allure/)
 
-![Screenshot_20](https://github.com/Frunzelen/QA_guru_python_6_12/assets/102532085/dcbc5c8e-0a3f-4f80-b6b0-92fba3ff20fc)
+![Screenshot_22](https://github.com/Frunzelen/QA_guru_python_6_12/assets/102532085/fafe9964-dde2-47bc-9be1-d9f844c76f25)
 
 ![Screenshot_21](https://github.com/Frunzelen/QA_guru_python_6_12/assets/102532085/0ee0b75a-746a-421f-8cb4-98214ee257dc)
